@@ -28,7 +28,6 @@ public class SampleController {
 
     @RequestMapping("/tst")
     public String index1(Model model) {
-
         model.addAttribute("gizmo", gizmo);
         return "show";
     }
