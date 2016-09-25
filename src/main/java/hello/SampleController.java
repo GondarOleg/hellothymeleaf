@@ -23,15 +23,16 @@ public class SampleController {
 
     @RequestMapping("/save")
     public String save(Gizmo gizmo) {
-        this.gizmo.setField1(gizmo.getField1());
-        this.gizmo.setField2(gizmo.getField2());
-        if(2 > beforeAspect.getSavingCount()) {
+        if (2 >= beforeAspect.getSavingCount()) {
+            this.gizmo.setField1(gizmo.getField1());
+            this.gizmo.setField2(gizmo.getField2());
             return "redirect:/";
-        }return "redirect:/deny";
+        }
+        return "redirect:/deny";
     }
 
     @RequestMapping("/deny")
-    public String deny(){
+    public String deny() {
         return "notallowedmore";
     }
 
