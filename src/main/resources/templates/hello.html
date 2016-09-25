@@ -4,10 +4,11 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <title>HELLO thymeleaf</title>
 </head>
 <body>
+<hr>
 <form id="gizmo-form" role="form" th:action="@{/save}" method="post" th:object="${gizmo}">
     <div>
         <label for="field1">Field 1</label>
@@ -17,14 +18,16 @@
         <label for="field2">Field 2</label>
         <input type="text" id="field2" name="field2" th:field="${gizmo.field2}"/>
     </div>
+
+    <hr>
     <div>
         <button type="submit">Save</button>
     </div>
-
 </form>
+<hr>
 <form action="/show" method="get">
-    <input type="submit" value="view saved object"  />
+    <input type="submit" value="View saved object"/>
 </form>
-
+<hr>
 </body>
 </html>
