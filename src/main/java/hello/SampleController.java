@@ -1,11 +1,17 @@
 package hello;
 
+import hello.aspects.BeforeAspect;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class SampleController {
+
+
+    @Autowired
+    private BeforeAspect beforeAspect;
 
     Gizmo gizmo = new Gizmo();
 
@@ -19,11 +25,18 @@ public class SampleController {
     public String save(Gizmo gizmo) {
         this.gizmo.setField1(gizmo.getField1());
         this.gizmo.setField2(gizmo.getField2());
-        return "redirect:/";
+        if(2 > beforeAspect.getSavingCount()) {
+            return "redirect:/";
+        }return "redirect:/deny";
     }
 
-    @RequestMapping("/tst")
-    public String index1(Model model) {
+    @RequestMapping("/deny")
+    public String deny(){
+        return "notallowedmore";
+    }
+
+    @RequestMapping("/show")
+    public String show(Model model) {
         model.addAttribute("gizmo", gizmo);
         return "show";
     }
