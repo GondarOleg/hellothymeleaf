@@ -1,9 +1,9 @@
-package hello;
+package hello.pojo;
 
 import org.springframework.context.annotation.Bean;
 
 
-public class Gizmo {
+public class SampleClass {
 
     private String field1;
     private String field2;

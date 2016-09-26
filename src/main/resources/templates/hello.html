@@ -9,14 +9,14 @@
 </head>
 <body>
 <hr>
-<form id="gizmo-form" role="form" th:action="@{/save}" method="post" th:object="${gizmo}">
+<form id="sampleClass-form" role="form" th:action="@{/save}" method="post" th:object="${sampleClass}">
     <div>
         <label for="field1">Field 1</label>
-        <input type="text" id="field1" name="field1" th:field="${gizmo.field1}"/>
+        <input type="text" id="field1" name="field1" th:field="${sampleClass.field1}"/>
     </div>
     <div>
         <label for="field2">Field 2</label>
-        <input type="text" id="field2" name="field2" th:field="${gizmo.field2}"/>
+        <input type="text" id="field2" name="field2" th:field="${sampleClass.field2}"/>
     </div>
 
     <hr>
