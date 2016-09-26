@@ -19,12 +19,12 @@ public class BeforeAspect {
 
     private int savingCount = 0;
 
-    public int getSavingCount() {
+    public synchronized int getSavingCount() {
         return savingCount;
     }
 
     @Before("aspectshomework.aspects.AspectsPointcut.savePointcut()")
-    public void beforeSaveOperation(){
+    public synchronized void beforeSaveOperation(){
         LOGGER.info("_________Before aspect___________");
         savingCount++;
     }
