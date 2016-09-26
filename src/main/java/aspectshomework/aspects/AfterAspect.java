@@ -1,4 +1,4 @@
-package hello.aspects;
+package aspectshomework.aspects;
 
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 public class AfterAspect {
     private static final Logger LOGGER = LoggerFactory.getLogger(AfterAspect.class);
 
-    @After("hello.aspects.AspectsPointcut.denyPointcut()")
+    @After("aspectshomework.aspects.AspectsPointcut.denyPointcut()")
     public void afterSave() throws Throwable {
 
         LOGGER.error("_________After aspect___________");

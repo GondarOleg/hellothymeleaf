@@ -1,4 +1,4 @@
-package hello.aspects;
+package aspectshomework.aspects;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -20,7 +20,7 @@ public class AroundAspect {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(AroundAspect.class);
 
-    @Around("hello.aspects.AspectsPointcut.savePointcut()")
+    @Around("aspectshomework.aspects.AspectsPointcut.savePointcut()")
     public String around(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
         LOGGER.info("_________Around aspect___________");
         LOGGER.info("------------------Before----------------");

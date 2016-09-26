@@ -8,10 +8,10 @@
 
     <aop:aspectj-autoproxy />
 
-    <bean id="beforeaspect" class="hello.aspects.BeforeAspect"/>
-    <bean id="afteraspect" class="hello.aspects.AfterAspect"/>
-    <bean id="aroundaspect" class="hello.aspects.AroundAspect"/>
-    <bean id="aspectspointcut" class="hello.aspects.AspectsPointcut"/>
+    <bean id="beforeaspect" class="aspectshomework.aspects.BeforeAspect"/>
+    <bean id="afteraspect" class="aspectshomework.aspects.AfterAspect"/>
+    <bean id="aroundaspect" class="aspectshomework.aspects.AroundAspect"/>
+    <bean id="aspectspointcut" class="aspectshomework.aspects.AspectsPointcut"/>
 
 
 

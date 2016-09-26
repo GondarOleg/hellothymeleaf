@@ -1,6 +1,6 @@
-package hello.controler;
+package aspectshomework.controler;
 
-import hello.pojo.SampleClass;
+import aspectshomework.pojo.SampleClass;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;

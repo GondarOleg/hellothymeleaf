@@ -1,6 +1,4 @@
-package hello.pojo;
-
-import org.springframework.context.annotation.Bean;
+package aspectshomework.pojo;
 
 
 public class SampleClass {
